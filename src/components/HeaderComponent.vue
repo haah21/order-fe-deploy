@@ -10,7 +10,7 @@
             </div>
           </v-col>
           <v-col class="text-center">
-            <v-btn :to="{ path: '/' }">21JAVA SHOP21</v-btn>
+            <v-btn :to="{ path: '/' }">JAVA SHOP</v-btn>
           </v-col>
   
           <v-col class="d-flex justify-end">
