@@ -65,6 +65,9 @@ export default {
                 localStorage.setItem('refreshToken', refreshToken);
                 localStorage.setItem('role', role);
                 // this.$router.push("/");
+                //sse를 위한 연결 코드
+
+
                 window.location.href = "/";
             } catch (error) {
                 console.error('로그인 실패:', error.response.data);

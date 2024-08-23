@@ -8,6 +8,7 @@ import { createRouter, createWebHistory } from "vue-router"
 import { praticeRouter } from "./praticeRouter";
 import { memberRouter } from "./memberRouter";
 import { productRouter } from "./productRouter";
+import { orderRouter } from "./orderRouter";
 const routes = [
     // {
     //     // path로도 라우팅이 가능하고 name으로도 라우팅이 가능
@@ -19,7 +20,8 @@ const routes = [
 
     ...praticeRouter,
     ...memberRouter,
-    ...productRouter
+    ...productRouter,
+    ...orderRouter
 ]
 
 

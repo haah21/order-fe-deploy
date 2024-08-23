@@ -6,6 +6,7 @@ import router from '@/router/index.js'
 import vuetify from './plugins/vuetify';
 import '@mdi/font/css/materialdesignicons.css'
 import axios from 'axios';
+import store from './store/index.js';
 // createApp(App).mount('#app')
 const app = createApp(App);
 
@@ -34,7 +35,6 @@ axios.interceptors.response.use(
                 try{
                     localStorage.removeItem('token');
                     const response = await axios.post(`${process.env.VUE_APP_API_BASE_URL}/member/refresh-token`,{refreshToken})
-                    alert("heer")
                     localStorage.setItem('token',response.data.result.token);
                     window.location.reload();
                 }catch(e){
@@ -42,9 +42,10 @@ axios.interceptors.response.use(
                     window.location.href = '/login';
                 }   
         }
+        return Promise.reject(error)
     }
 )
 app.use(router);
 app.use(vuetify);
 app.mount('#app');
-
+app.use(store);
