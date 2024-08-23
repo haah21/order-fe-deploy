@@ -2,8 +2,7 @@
 name: deploy to aws s3
 # 메인 브랜치에 push 될때 현재 스크립트 실행 trigger 발동
 on:
-  push:
-    branches:
+  branches:
       - main
 jobs:
 # workflow는 하나 이상의 작업(job)으로 구성, 여기서는 하나의 작업만을 정의
