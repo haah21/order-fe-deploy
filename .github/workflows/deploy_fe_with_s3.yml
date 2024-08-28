@@ -76,6 +76,8 @@ jobs:
       - name: deploy to s3
         run: aws s3 cp ./dist s3://www.dabok.store/ --recursive
 
-
+      # 무효화`/
       - name: invalidate cloudfront caches
-        run: aws cloudfront create-invalidation --distribution-id E2FAHET8MKTCDA --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id EHFEOC2K0FUB4 --paths "/*"
+
+
